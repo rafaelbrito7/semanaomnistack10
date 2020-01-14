@@ -1,5 +1,6 @@
 const axios = require('axios');
 const Dev = require('../models/dev.model');
+const parseStringAsArray = require('../utils/parseStringAsArray');
 
 module.exports = {
   async store(request, response) {
@@ -14,7 +15,7 @@ module.exports = {
 
       const { name = login, bio, avatar_url } = apiResponse.data;
 
-      const techsArray = techs.split(',').map(tech => tech.trim());
+      const techsArray = parseStringAsArray(techs);
 
       console.log(name, bio, avatar_url, github_username, techsArray);
 
