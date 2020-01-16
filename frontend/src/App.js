@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 //Componente: Bloco isolado de HTML, CSS e JS, o qual não interfere no restante da aplicação
 //Propriedade: Informações que um componente PAI passa para o componente filho
